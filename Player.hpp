@@ -1,27 +1,20 @@
-#ifndef PLAYER_HPP_INCLUDED
-#define PLAYER_HPP_INCLUDED
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
 #include <string>
-class Player
+struct Player
 {
     std::string player_name;
     short x, y, z;
     char heading, pitch;
 
-    public:
-        Player(std::string name);
-
-        std::string get_name();
-        void set_name(std::string new_name);
-
-        short get_x();
-        short get_y();
-        short get_z();
-        void set_position(short new_x, short new_y, short new_z);
-
-        char get_heading();
-        char get_pitch();
-        void set_orientation(char new_heading, char new_pitch);
+    explicit Player(std::string name, short my_x, short my_y, short my_z, short my_heading, char my_pitch)
+      : player_name(name),
+      x(my_x),
+      y(my_y),
+      z(my_z),
+      heading(my_heading),
+      pitch(my_pitch)
+  {}
 };
 
-
-#endif // PLAYER_HPP_INCLUDED
+#endif // PLAYER_HPP
