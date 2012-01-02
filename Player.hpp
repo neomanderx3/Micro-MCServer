@@ -3,18 +3,18 @@
 #include <string>
 struct Player
 {
-    std::string player_name;
+    std::string name;
     short x, y, z;
     char heading, pitch;
 
-    explicit Player(std::string name, short my_x, short my_y, short my_z, short my_heading, char my_pitch)
-      : player_name(name),
-      x(my_x),
-      y(my_y),
-      z(my_z),
-      heading(my_heading),
-      pitch(my_pitch)
-  {}
+    explicit Player(std::string player_name, short player_x, short player_y, short player_z, char player_heading, char player_pitch)
+        : name(player_name),
+        x(player_x),
+        y(player_y),
+        z(player_z),
+        heading(player_heading),
+        pitch(player_pitch)
+    {}
 };
 
 #endif // PLAYER_HPP
